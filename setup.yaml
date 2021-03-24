@@ -1,11 +1,26 @@
 users:
   - name: wordpress
     password: $MYSQL_WORDPRESS_PASSWORD
+  - name: veative
+    password: $MYSQL_VEATIVE_PASSWORD
     
 databases:
   - name: wordpress
+  - name: veative
   
 acl:
   - database: wordpress
     user: wordpress
     access: ALL
+  - database: veative
+    user: veative
+    access: ALL
+
+restore:
+  - database: veative
+    source:
+       url: 'https://www.ecloudcontrol.com/wp-content/uploads/2020/12/accountdb_20201210.zip'
+       file: 
+    user: veative
+    password: $MYSQL_VEATIVE_PASSWORD  # password of the 'user' above.
+    token: 20210318-1843  # The restore token to be validated before restoring the database. (Same as TEARDOWN_TOKEN)
