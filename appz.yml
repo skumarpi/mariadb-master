@@ -28,11 +28,18 @@ volumes:
     size: 5Gi
   
 properties:
+    ##Core Database Section
+    MYSQL_ROOT_PASSWORD:
+      vault: MYSQL_ROOT_PASSWORD_KEY
     MYSQL_REPLICATION_USER: replication
     MYSQL_REPLICATION_PASSWORD:
       vault: MYSQL_REPLICATION_PASSWORD
+      
+    ##Application Databases Section
     MYSQL_WORDPRESS_PASSWORD:
       vault: MYSQL_WORDPRESS_PASSWORD 
-    MYSQL_ROOT_PASSWORD:
-      vault: MYSQL_ROOT_PASSWORD_KEY
+    MYSQL_VEATIVE_PASSWORD:
+      vault: MYSQL_VEATIVE_PASSWORD
+      
+    ##General Section
     revision : 35
