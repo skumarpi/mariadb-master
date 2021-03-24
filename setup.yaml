@@ -23,4 +23,4 @@ restore:
        file: test_veative.sql
     user: veative
     password: $MYSQL_VEATIVE_PASSWORD  # password of the 'user' above.
-    token: 20210325-1805  # The restore token to be validated before restoring the database. (Same as TEARDOWN_TOKEN)
+    token: 20210324-2020  # The restore token to be validated before restoring the database. (Same as TEARDOWN_TOKEN)
